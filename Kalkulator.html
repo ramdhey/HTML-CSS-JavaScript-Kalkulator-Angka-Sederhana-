@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Kalkulator Angka by Rama Dhea Yudhistira</title>
+ <link rel="stylesheet" type="text/css" href="Kal.css">
+ <style type="text/css">
+  .tombol{
+   background-color:orange;
+  }
+  .tabel{
+   
+   margin: auto;
+   padding: 300px;
+  }
+ </style>
+</head>
+<body>
+ <form name="calculator">
+  
+  <table style="background-color: " class="tabel">
+   <caption>Kalkulator Angka</caption>
+   <tr>
+    <td>Nilai I</td><td>:</td><td><input type="number" name="angka1"></td>
+   </tr>
+   <tr>
+    <td>Nilai II</td><td>:</td><td><input type="number" name="angka2"></td>
+   </tr>
+   <tr>
+    <td>Hasil Sama Dnegan</td><td>:</td><td><input type="number" name="hasil"></td>
+   </tr>
+   <tr>
+    <td colspan="3" align="center">
+     <input class="tombol" type="button" onclick="tambah()" value="  +  ">
+     <input class="tombol" type="button" onclick="kurang()" value="  -  ">
+     <input class="tombol" type="button" onclick="kali()" value="  X  ">
+     <input class="tombol" type="button" onclick="bagi()" value="  :  ">
+    </td>
+   </tr>
+  </table>
+ </form>
+
+</body>
+</html>
+<script type="text/javascript">
+function tambah(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1+angka2;
+ document.calculator.hasil.value=hasil;
+}
+function kurang(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1-angka2;
+ document.calculator.hasil.value=hasil;
+}
+function kali(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1*angka2;
+ document.calculator.hasil.value=hasil;
+}
+function bagi(){
+ var angka1=parseFloat(document.calculator.angka1.value);
+ var angka2=parseFloat(document.calculator.angka2.value);
+ var hasil= angka1/angka2;
+ document.calculator.hasil.value=hasil;
+}
+</script>
